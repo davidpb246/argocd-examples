@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apache-child
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/tu-usuario/argocd-examples'
+    targetRevision: '1.0.0'
+    chart: apache
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
