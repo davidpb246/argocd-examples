@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/tu-usuario/argocd-examples'
+    repoURL: 'https://github.com/davidpb246/argocd-examples'
     targetRevision: '1.0.0'
     chart: apache
     helm:
