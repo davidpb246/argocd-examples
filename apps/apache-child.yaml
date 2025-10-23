@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/davidpb246/argocd-examples'
-    targetRevision: '1.0.0'
-    chart: apache
+    targetRevision: 'main'  # o '1.0.0' si es una rama o tag
+    path: charts/apache      # ruta dentro del repo donde está el chart
     helm:
       valueFiles:
         - values.yaml
